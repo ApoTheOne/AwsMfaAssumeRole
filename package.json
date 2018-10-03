@@ -1,0 +1,29 @@
+{
+  "name": "awsmfaassumerole",
+  "version": "1.0.0",
+  "description": "Set credentials when using AWS MFA and assume role\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5D\u001b[1;5Dhave to assume a role",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ApoTheOne/AwsMfaAssumeRole.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "jest",
+    "aws",
+    "mfa",
+    "assume",
+    "role",
+    "sts"
+  ],
+  "author": "ANurag\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[3~An",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ApoTheOne/AwsMfaAssumeRole/issues"
+  },
+  "homepage": "https://github.com/ApoTheOne/AwsMfaAssumeRole#readme"
+}
