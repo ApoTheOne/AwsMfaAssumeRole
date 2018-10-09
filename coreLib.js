@@ -62,8 +62,8 @@ function GetMfaAndRunSts(configData) {
         } else {
             rl.output.write(stringToWrite);
         }
-    };
     rl.history = rl.history.slice(1);
+    };
 }
 function setCred(cred, configData) {
     let path = `C:/users/${username}/.aws/credentials`;
