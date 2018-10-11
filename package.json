@@ -1,35 +1,37 @@
 {
-  "name": "awsmfaassumerole",
-  "version": "1.0.0",
-  "description": "Set credentials when using AWS MFA and one have to assume a role",
-  "main": "coreLib.js",
-  "scripts": {
-    "test": "jest "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ApoTheOne/AwsMfaAssumeRole.git"
-  },
-  "keywords": [
-    "node",
-    "js",
-    "jest",
-    "aws",
-    "mfa",
-    "assume",
-    "role",
-    "sts"
-  ],
-  "author": "Apo",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ApoTheOne/AwsMfaAssumeRole/issues"
-  },
-  "homepage": "https://github.com/ApoTheOne/AwsMfaAssumeRole#readme",
-  "devDependencies": {
-    "eslint": "^5.6.1",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.4"
-  },
-  "dependencies": {}
+    "name": "awsmfaassumerole",
+    "version": "1.0.0",
+    "description": "Set credentials when using AWS MFA and one have to assume a role",
+    "main": "coreLib.js",
+    "scripts": {
+        "start": "node ./coreLib.js",
+        "debug": "node --inspect-brk=12345 ./coreLib.js",
+        "test": "jest "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ApoTheOne/AwsMfaAssumeRole.git"
+    },
+    "keywords": [
+        "node",
+        "js",
+        "jest",
+        "aws",
+        "mfa",
+        "assume",
+        "role",
+        "sts"
+    ],
+    "author": "Apo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ApoTheOne/AwsMfaAssumeRole/issues"
+    },
+    "homepage": "https://github.com/ApoTheOne/AwsMfaAssumeRole#readme",
+    "devDependencies": {
+        "eslint": "^5.6.1",
+        "jest": "^23.6.0",
+        "nodemon": "^1.18.4"
+    },
+    "dependencies": {}
 }
