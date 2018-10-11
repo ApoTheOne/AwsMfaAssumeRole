@@ -62,7 +62,7 @@ function GetMfaAndRunSts(configData) {
         } else {
             rl.output.write(stringToWrite);
         }
-    rl.history = rl.history.slice(1);
+        rl.history = rl.history.slice(1);
     };
 }
 function setCred(cred, configData) {
@@ -86,7 +86,9 @@ aws_session_token = ${cred.SessionToken}
             fs.writeFile(path, updatedData, err => {
                 if (err) console.log(err);
                 else {
-                    console.info('Credentials updated successfully!');
+                    console.info(
+                        `\nCredentials updated successfully and are valid till ${cred.Expiration.toString()}`
+                    );
                     process.exit();
                 }
             });
