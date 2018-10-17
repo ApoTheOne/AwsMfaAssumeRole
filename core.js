@@ -57,10 +57,11 @@ const getMfaRunStsSetCred = async function getMfaRunStsSetCred(configData) {
 
 const setCred = async function setCred(cred, configData) {
     const path = `C:/users/${username}/.aws/credentials`;
-    let data = await readFileAsync(path).toString();
+    let data = await readFileAsync(path);
+    data = data.toString();
     let oldData = data.substring(
-        data.indexOf(`[${data.mfaProfile}]`),
-        data.indexOf(`[${data.assumedProfile}]`)
+        data.indexOf(`[${configData.mfaProfile}]`),
+        data.indexOf(`[${configData.assumedProfile}]`)
     );
     let updatedData = `[${configData.mfaProfile}]
 aws_access_key_id = ${cred.AccessKeyId}
@@ -69,9 +70,15 @@ aws_session_token = ${cred.SessionToken}
 
 `;
     data = data.replace(oldData, updatedData);
-    console.log(
-        `\nCredentials updated successfully and are valid till ${cred.Expiration.toString()}`
-    );
+
+    try {
+        await writeFileAsync(path, data);
+        console.log(
+            `\nCredentials updated successfully and are valid till ${cred.Expiration.toString()}`
+        );
+    } catch (error) {
+        console.error(error, null, 2);
+    }
     process.exit();
 };
 
